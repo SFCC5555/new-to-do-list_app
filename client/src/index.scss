@@ -1,0 +1,55 @@
+// Importing a Google Fonts font
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+// Importing base styles, components and utilities from Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Setting box-sizing, margin, and padding for all elements in the document
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Color and font variables defined in the :root selector
+:root {
+  --main-font: "Josefin Sans", sans-serif;
+
+  --main-color: #201f20;
+  --light-color: #413f47;
+  --dark-color: #28272b;
+  --text-color: #ffffff;
+}
+
+@each $color in "main", "light", "dark" {
+  .#{$color}-bg {
+    background-color: var(--#{$color}-color);
+  }
+
+  .#{$color}-border {
+    border-color: var(--#{$color}-color);
+  }
+}
+
+body {
+  height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  padding-top: 75px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
