@@ -146,15 +146,15 @@ const TaskFormPage = () => {
         </div>
         {newTaskStatus.message && (
           <p
-            className={`text-${
+            className={`${
               newTaskStatus.message === "Loading..."
-                ? "grey"
+                ? "text-gray-400"
                 : newTaskStatus.status && id
-                ? "blue"
+                ? "text-blue-400"
                 : newTaskStatus.status
-                ? "green"
-                : "red"
-            }-400 pt-2 pl-1 text-sm`}
+                ? "text-green-400"
+                : "text-red-400"
+            } pt-2 pl-1 text-sm`}
           >
             {newTaskStatus.message}
           </p>
